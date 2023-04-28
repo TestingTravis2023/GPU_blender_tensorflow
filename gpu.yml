@@ -43,34 +43,34 @@ jobs:
     - stage: "Instal addons on linux"
       name: "addons on focal distribution gpu xlarge"
       dist: focal
-      addons:
-        tensorflow: 2.6.2
-        blender: 3.4.1
       vm:
         size: 'gpu-xlarge'
       language: python
       python:
         - "3.9"
       arch: 'amd64'
-      script:
-        - df -h
-        - lspci
-        - python hello_world.py
-        - bash render_script.sh
-    - stage: "Instal addons on linux"
-      name: "addons on focal distribution gpu medium"
-      dist: focal
       addons:
         tensorflow: 2.6.2
         blender: 3.4.1
-      vm:
-        size: 'gpu-medium'
-      language: python
-      python:
-        - "3.9"
-      arch: 'amd64'
       script:
         - df -h
         - lspci
         - python hello_world.py
         - bash render_script.sh
+#     - stage: "Instal addons on linux"
+#       name: "addons on focal distribution gpu medium"
+#       dist: focal
+#       addons:
+#         tensorflow: 2.6.2
+#         blender: 3.4.1
+#       vm:
+#         size: 'gpu-medium'
+#       language: python
+#       python:
+#         - "3.9"
+#       arch: 'amd64'
+#       script:
+#         - df -h
+#         - lspci
+#         - python hello_world.py
+#         - bash render_script.sh
